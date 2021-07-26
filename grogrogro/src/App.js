@@ -11,15 +11,15 @@ import Home from "./Pages/Home";
 function App() {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggle =() => {
-    setIsOpen(!isOpen)
+  const toggle = () => {
+    setIsOpen(!isOpen);
   };
 
   useEffect (() => {
     const hideMenu = () => {
     if(window.innerWidth > 768 && isOpen) {
-      setIsOpen(false)
-      console.log("Resized")
+      setIsOpen(false);
+      console.log("Resized");
     }
   };
     window.addEventListener('resize', hideMenu);
